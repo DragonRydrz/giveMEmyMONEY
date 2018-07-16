@@ -60,4 +60,4 @@ User.methods.checkPassword = function(plainTextPW) {
   }
 };
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('User', User);

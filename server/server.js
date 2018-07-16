@@ -15,6 +15,8 @@ server.get('/', (req, res) => {
   res.json({ message: 'API running successfully! YAY!' });
 });
 
+server.use('/api/register', require('./controllers/users/registerUser'));
+
 mongoose
   .connect(process.env.DATA_BASE || 'mongodb://localhost/givememymoney')
   .then(() => {

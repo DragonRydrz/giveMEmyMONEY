@@ -1,10 +1,10 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
-const User = require('../User/User');
+const User = require('../models/users');
 const ExtractJwt = require('passport-jwt').ExtractJwt;
 const JwtStrategy = require('passport-jwt').Strategy;
 const jwt = require('jsonwebtoken');
-const { secret } = require('../secrets/config');
+const { secret } = require('../config');
 
 function makeToken(user) {
   // sub: subject (id)
